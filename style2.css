@@ -1,0 +1,191 @@
+.final-score {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 520px;
+    color: #555;
+    font-size: 18px;
+    font-family: 'Lato';
+    text-align: center;
+    padding: 10px;
+    width: 160px;
+    text-transform: uppercase;
+}
+
+.final-score:focus { outline: none; }
+
+#dice-1{top:120px;}
+
+#dice-2{top:250px;}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/7c91aa96-1874-4f18-a288-5e483e60ce75/d1h0dxi-6f4e60b9-a280-42ef-8f8d-32afae84d5ee.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+    font-family: Lato;
+    font-weight: 300;
+    position: relative;
+    height: 1200px;
+    color: rgb(0, 0, 0);
+}
+
+.wrapper {
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.player-0-panel,
+.player-1-panel {
+    width: 50%;
+    float: left;
+    height: 600px;
+    padding: 100px;
+}
+
+
+
+/**********************************************
+*** PLAYERS
+**********************************************/
+
+.player-name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 1px;
+    margin-bottom: 50px;
+    position: relative;
+    color: antiquewhite;
+    background-color: black;
+}
+
+.player-score {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 100;
+    color: rgb(235, 156, 52);
+    margin-bottom: 10px;
+    margin-top: 2px;
+}
+
+.active { background-color: #000000; }
+.active .player-name { font-weight: 300; }
+
+.active .player-name::after {
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: #ffffff;
+    top: -2px;
+    right: 10px;
+    
+}
+
+.player-current-box {
+    background-color: #000000;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: rgb(235, 156, 52);
+    display: inline-flexbox;
+}
+
+.player-current-score {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+button {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color:rgb(235, 156, 52);
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+div{
+    text-emphasis-color: white;
+        color: white;
+        background-color: black;
+        float: right;
+        align-items:center
+} 
+
+span{
+    text-emphasis-color: white;
+    color: white; 
+    background-color: black;
+    height: 400px;
+}
+
+button:hover { font-weight: 600; }
+button:hover i { margin-right: 20px; }
+
+button:focus {
+    outline: none;
+}
+
+i {
+    color: antiquewhite;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;
+}
+
+.btn-new { top: 45px;}
+.btn-roll { top: 403px;}
+.btn-hold { top: 467px;}
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 178px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgb(255, 255, 255);
+}
+
+.winner { background:url('https://preview.ibb.co/fiExyG/winner.jpg'); }
+.winner .player-name { font-weight: 300; color: #EB4D4D; }
